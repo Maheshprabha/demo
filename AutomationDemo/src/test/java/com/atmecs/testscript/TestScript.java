@@ -5,66 +5,73 @@ import org.testng.annotations.Test;
 
 import com.atmecs.baseclass.BaseClass;
 import com.atmecs.commonhelpers.CommonHelpers;
+import com.atmecs.filepath.FilePath;
 import com.atmecs.readerlocation.ReaderLocation;
 
 public class TestScript extends BaseClass {
 	static Properties property;
 	ReaderLocation read = new ReaderLocation();
 
+
 	@Test
 	public void fillingFormDetails() throws Exception {
 		System.out.println("launch chrome");
+		property = ReaderLocation.readLocation(FilePath.locator_path);
+		property = ReaderLocation.readLocation(FilePath.User_path);
+
+	
+
 		// enter user first name
-		CommonHelpers.sendText(driver, "loc_firstname", "user_name");
+		CommonHelpers.sendText(driver, property.getProperty("loc_firstname"), property.getProperty("user_name"));
 
 		// enter user second name
-		CommonHelpers.sendText(driver, "loc_secondname", "user_secondname");
+		CommonHelpers.sendText(driver, property.getProperty("loc_secondname"), property.getProperty("user_secondname"));
 
 		// enter user place
-		CommonHelpers.sendText(driver, "loc_address", "user_place");
+		CommonHelpers.sendText(driver, property.getProperty("loc_address"), property.getProperty("user_place"));
 
 		// enter user mail id
-		CommonHelpers.sendText(driver, "loc_emailaddress", "user_emailaddress");
+		CommonHelpers.sendText(driver, property.getProperty("loc_emailaddress"), property.getProperty("user_emailaddress"));
 
 		// enter user contact number
-		CommonHelpers.sendText(driver, "loc_contactnumber", "user_contactnumber");
+		CommonHelpers.sendText(driver, property.getProperty("loc_contactnumber"), property.getProperty("user_contactnumber"));
 
 		// select gender option
-		CommonHelpers.clickAction(driver, "loc_femele");
+		CommonHelpers.clickAction(driver, property.getProperty("loc_femele"));
 
 		// select hobbies
-		CommonHelpers.clickAction(driver, "loc_checkbox");
+		CommonHelpers.clickAction(driver, property.getProperty("loc_checkbox"));
 
 		// select language
-		CommonHelpers.clickAction(driver, "loc_languages");
-		CommonHelpers.clickAction(driver, "loc_selectlanguage");
+		CommonHelpers.clickAction(driver, property.getProperty("loc_languages"));
+		CommonHelpers.clickAction(driver, property.getProperty("loc_selectlanguage"));
 
 		// select skills
-		CommonHelpers.dropDownMenu(driver, "loc_skills", "user_skills");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_skills"), property.getProperty("user_skills"));
 
 		// select country
-		CommonHelpers.dropDownMenu(driver, "loc_country", "user_country");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_country"), property.getProperty("user_country"));
 
 		// select additional country
-		CommonHelpers.dropDownMenu(driver, "loc_ selectcountry", "user_selectcountry");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_ selectcountry"), property.getProperty("user_selectcountry"));
 
 		// select year
-		CommonHelpers.dropDownMenu(driver, "loc_year", "user_year");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_year"), property.getProperty("user_year"));
 
 		// select month
-		CommonHelpers.dropDownMenu(driver, "loc_month", "user_month");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_month"), property.getProperty("user_month"));
 
 		// select day
-		CommonHelpers.dropDownMenu(driver, "loc_day", "user_day");
+		CommonHelpers.dropDownMenu(driver, property.getProperty("loc_day"), property.getProperty("user_day"));
 
 		// enter password
-		CommonHelpers.sendText(driver, "loc_firstpassword", "user_firstpassword");
+		CommonHelpers.sendText(driver, property.getProperty("loc_firstpassword"), property.getProperty("user_firstpassword"));
 
 		// enter conform password
-		CommonHelpers.sendText(driver, "loc_conformpassword", "user_conformpassword");
+		CommonHelpers.sendText(driver, property.getProperty("loc_conformpassword"), property.getProperty("user_conformpassword"));
 
 		// click submit
-		CommonHelpers.clickAction(driver, "loc_submit");
+		CommonHelpers.clickAction(driver, property.getProperty("loc_submit"));
 
 	}
 

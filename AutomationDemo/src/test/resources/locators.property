@@ -16,3 +16,12 @@ loc_day= //select[@id='daybox']
 loc_firstpassword = //input[@id='firstpassword']
 loc_conformpassword = //input[@id='secondpassword']
 loc_submit = //button[text()=' Submit ']
+
+
+
+xpath for window handling
+loc_facebook = //span[@class='fa fa-facebook-square']
+loc_twitter = //a[@class='link twitter']
+loc_linkedin = //span[@class='fa fa-linkedin-square']
+loc_google = //a[@class='link google-plus']
+loc_youtube = //span[@class='fa fa-youtube-square']
