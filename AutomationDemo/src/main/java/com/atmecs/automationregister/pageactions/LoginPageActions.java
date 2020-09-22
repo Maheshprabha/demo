@@ -1,27 +1,22 @@
-package com.atmecs.testscript;
+package com.atmecs.automationregister.pageactions;
 
 import java.util.Properties;
-import org.testng.annotations.Test;
 
-import com.atmecs.baseclass.BaseClass;
-import com.atmecs.commonhelpers.CommonHelpers;
-import com.atmecs.filepath.FilePath;
-import com.atmecs.readerlocation.ReaderLocation;
+import org.openqa.selenium.WebDriver;
 
-public class TestScript extends BaseClass {
+import com.atmecs.automationregister.commonhelpers.CommonHelpers;
+import com.atmecs.automationregister.filepath.FilePath;
+import com.atmecs.automationregister.readerlocation.ReaderLocation;
+
+public class LoginPageActions {   
 	static Properties property;
 	ReaderLocation read = new ReaderLocation();
-
-
-	@Test
+    WebDriver driver;
 	public void fillingFormDetails() throws Exception {
 		System.out.println("launch chrome");
 		property = ReaderLocation.readLocation(FilePath.locator_path);
 		property = ReaderLocation.readLocation(FilePath.User_path);
-
-	
-
-		// enter user first name
+       // enter user first name
 		CommonHelpers.sendText(driver, property.getProperty("loc_firstname"), property.getProperty("user_name"));
 
 		// enter user second name
@@ -75,23 +70,5 @@ public class TestScript extends BaseClass {
 
 	}
 
-	// Select dropdown = new
-	// Select(driver.findElement(By.id("//select[@type='text']")));
-	// dropdown.selectByVisibleText("APIs");
-	// Select dropdown1 = new
-	// Select(driver.findElement(By.id("//select[@id'countries']")));
-	// dropdown1.selectByVisibleText("India");
-	// CommonHelpers.dropDown(driver, "//span[@role='combobox']",
-	// "//span[text()='India']");
-	// Select year = new
-	// Select(driver.findElement(By.id("//select[@id='yearbox']")));
-	// year.selectByVisibleText("2000");
-
-	// Select month = new
-	// Select(driver.findElement(By.id("//select[@placeholder='Month']")));
-	// month.selectByVisibleText("May");
-
-	// Select day = new Select(driver.findElement(By.id("//select[@id='daybox']")));
-	// day.selectByVisibleText("12");
 
 }

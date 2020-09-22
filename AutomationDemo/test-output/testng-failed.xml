@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.testscript.WindowHandles">
+      <class name="com.atmecs.testscript.TestScript">
         <methods>
-          <include name="launchChrome"/>
+          <include name="fillingFormDetails"/>
           <include name="invokeBrowser"/>
         </methods>
-      </class> <!-- com.atmecs.testscript.WindowHandles -->
+      </class> <!-- com.atmecs.testscript.TestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

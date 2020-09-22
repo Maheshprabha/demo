@@ -1,16 +1,54 @@
-package com.atmecs.testscript;
+package com.atmecs.automationregister.testscript;
 
-import java.util.Properties;
 
-import org.testng.annotations.Test;
 
-import com.atmecs.baseclass.BaseClass;
-import com.atmecs.commonhelpers.CommonHelpers;
-import com.atmecs.filepath.FilePath;
-import com.atmecs.readerlocation.ReaderLocation;
+import com.atmecs.automationregister.baseclass.BaseClass;
 
-public class WindowHandles extends BaseClass {
-	static Properties property;
+import com.atmecs.automationregister.pageactions.WindowHandlingPageAction;
+
+public class WindowHandlesTest extends BaseClass {
+	WindowHandlingPageAction windowhandleaction = new WindowHandlingPageAction();
+	public void windowHandle() throws Exception {
+		windowhandleaction.windowHandle();
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+	
+/*	static Properties property;
     ReaderLocation read = new ReaderLocation();
     @Test
     public void launchChrome() throws Exception {
@@ -23,11 +61,11 @@ public class WindowHandles extends BaseClass {
     	CommonHelpers.switchTOWindows(driver, property.getProperty("loc_linkedin"));
     	CommonHelpers.switchTOWindows(driver, property.getProperty("loc_google"));
     	CommonHelpers.switchTOWindows(driver, property.getProperty("loc_youtube"));
-
+*/
     	
 
 
 
-    }
+    
 
-}
+
